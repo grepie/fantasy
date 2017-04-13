@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	 <modelVersion>4.0.0</modelVersion>
+	 <groupId>cn.grepie</groupId>
+	 <artifactId>OnePiece</artifactId>
+	 <version>0.0.1-SNAPSHOT</version>
+	 <packaging>pom</packaging>
+	 <name>OnePiece</name>
+	 <description>OnePiece</description>
+	 <url>http://http://grepie.cn/</url>
+	<properties>
+		<!-- 文件拷贝时的编码 -->  
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>  
+        <!-- 编译时的编码 -->  
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>  
+		<java_source_version>1.7</java_source_version>
+		<java_target_version>1.7</java_target_version>
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>${java_source_version}</source> <!-- 源代码使用的开发版本 -->
+					<target>${java_target_version}</target> <!-- 需要生成的目标class文件的编译版本 -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
